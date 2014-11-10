@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>storage.localStorage</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		function getTitle() {
+			document.getElementById("ct").innerHTML = "DEMO: " + document.title;
+		}
+	</script>
+
+
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        window.localStorage.setItem("key", "value");
+        var keyname = window.localStorage.key(i);
+        // keyname is now equal to "key"
+        var value = window.localStorage.getItem("key");
+        // value is now equal to "value"
+        window.localStorage.removeItem("key");
+        window.localStorage.setItem("key2", "value2");
+        window.localStorage.clear();
+        // localStorage is now empty
+    }
+
+    </script>
+  </head>
+  <body onload="getTitle();">
+	<ul id="nav">
+		<li><a href="index.html">&larr; Back</a></li>
+		<li><a href="#" id="ct" onclick="location.reload();"></a></li>
+	</ul>
+    <h1>Example</h1>
+    <p>localStorage</p>
+  </body>
+</html>

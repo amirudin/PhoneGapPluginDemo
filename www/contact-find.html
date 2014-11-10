@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact.find</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		function getTitle() {
+			document.getElementById("ct").innerHTML = "DEMO: " + document.title;
+		}
+	</script>
+
+
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
+
+            // Wait for device API libraries to load
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            // device APIs are available
+
+            function onDeviceReady() {
+                // find all contacts with 'Bob' in any name field
+                var options = new ContactFindOptions();
+                options.filter = "Bob";
+                var fields = ["displayName", "name"];
+                navigator.contacts.find(fields, onSuccess, onError, options);
+            }
+
+            // onSuccess: Get a snapshot of the current contacts
+
+            function onSuccess(contacts) {
+                for (var i = 0; i < contacts.length; i++) {
+                    console.log("Display Name = " + contacts[i].displayName);
+                }
+            }
+
+            // onError: Failed to get the contacts
+
+            function onError(contactError) {
+                alert('onError!');
+            }
+        </script>
+    </head>
+
+    <body onload="getTitle();">
+	<ul id="nav">
+		<li><a href="index.html">&larr; Back</a></li>
+		<li><a href="#" id="ct" onclick="location.reload();"></a></li>
+	</ul>
+        <h1>Example</h1>
+        <p>Find Contacts</p>
+    </body>
+</html>

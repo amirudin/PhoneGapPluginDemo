@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>globalization.globalizationError</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		function getTitle() {
+			document.getElementById("ct").innerHTML = "DEMO: " + document.title;
+		}
+	</script>
+
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    function successCallback(date) {
+      alert('month:' + date.month +
+            ' day:' + date.day +
+            ' year:' + date.year + '\n');
+    }
+
+    function errorCallback(error) {
+      alert('code: ' + error.code + '\n' +
+            'message: ' + error.message + '\n');
+    };
+
+    function checkError() {
+      navigator.globalization.stringToDate(
+        'notADate',
+        successCallback,
+        errorCallback,
+        {selector:'foobar'}
+      );
+    }
+
+    </script>
+  </head>
+  <body onload="getTitle();">
+	<ul id="nav">
+		<li><a href="index.html">&larr; Back</a></li>
+		<li><a href="#" id="ct" onclick="location.reload();"></a></li>
+	</ul>
+    <button onclick="checkError()">Click for error</button>
+  </body>
+</html>
