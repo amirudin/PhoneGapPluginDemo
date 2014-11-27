@@ -2,7 +2,12 @@
 <html>
   <head>
     <title>Device Properties Example</title>
-
+        <link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		function getTitle() {
+			document.getElementById("ct").innerHTML = "DEMO: " + document.title;
+		}
+	</script>
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8">
 
@@ -38,7 +43,11 @@
 
     </script>
   </head>
-  <body>
+ <body onload="getTitle();">
+	<ul id="nav">
+		<li><a href="index.html">&larr; Back</a></li>
+		<li><a href="#" id="ct" onclick="location.reload();"></a></li>
+	</ul>
     <p id="geolocation">Watching geolocation...</p>
   </body>
 </html>
