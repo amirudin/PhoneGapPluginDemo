@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>HTML5-FileInput</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		function getTitle() {
+			document.getElementById("ct").innerHTML = "DEMO: " + document.title;
+		}
+	</script>
+      </head>
+      <body onload="getTitle();">
+	<ul id="nav">
+		<li><a href="index.html">&larr; Back</a></li>
+		<li><a href="#" id="ct" onclick="location.reload();"></a></li>
+	</ul>
+        <video width="100%" controls>
+		  <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+		  <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+		  Your browser does not support HTML5 video.
+		</video>
+      </body>
+    </html>

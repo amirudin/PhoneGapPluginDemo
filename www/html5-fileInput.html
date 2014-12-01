@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>HTML5-FileInput</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		function getTitle() {
+			document.getElementById("ct").innerHTML = "DEMO: " + document.title;
+		}
+	</script>
+      </head>
+      <body onload="getTitle();">
+	<ul id="nav">
+		<li><a href="index.html">&larr; Back</a></li>
+		<li><a href="#" id="ct" onclick="location.reload();"></a></li>
+	</ul>
+        <form action="demo_form.asp">
+		  <input type="file" name="pic" accept="image/*">
+		  <input type="submit">
+		</form>
+      </body>
+    </html>
