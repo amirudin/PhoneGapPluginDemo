@@ -67,7 +67,7 @@
     <!--
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     -->
-    <gap:plugin name="com.phonegap.plugins.facebookconnect" value="0.8.0">
+    <gap:plugin name="com.phonegap.plugins.facebookconnect" value="0.9.0">
         <param name="APP_ID" value="511051589003546" />
         <param name="APP_NAME" value="ibuyLocal mobile app" />
     </gap:plugin>
