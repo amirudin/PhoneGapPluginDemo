@@ -69,7 +69,7 @@
     -->
     <gap:plugin name="com.phonegap.plugins.facebookconnect" value="0.9.0">
         <param name="APP_ID" value="511051589003546" />
-        <param name="APP_NAME" value="ibuyLocal mobile app" />
+        <param name="APP_NAME" value="ibuyLocalmobileapp" />
     </gap:plugin>
 
     <!-- <param name="APP_NAME" value="iBuyLocal Mobile App" /> -->
