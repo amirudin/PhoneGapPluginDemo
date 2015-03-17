@@ -67,6 +67,7 @@
     <!--
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     -->
+    <gap:plugin name="com.sharinglabs.cordova.plugin.cache" version="1.0.0"/>
     <gap:plugin name="com.brodysoft.sqliteplugin" version="1.0.4"/>
     <gap:plugin name="com.phonegap.plugins.facebookconnect" value="0.9.0">
         <param name="APP_ID" value="511051589003546" />
